@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic profile and research portfolio for Dr. Alex Morgan, computational biologist.">
+  <meta name="description" content="Academic profile and research portfolio for Dr. Maranus Huajie Chen.">
   <meta name="theme-color" content="#102f2b">
-  <title>Dr. Alex Morgan — Computational Biologist</title>
+  <title>Dr. Maranus Huajie Chen — Researcher</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
@@ -64,9 +64,11 @@
     .status { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 28px; }
     .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
     h1 { margin: 0; font-size: clamp(4.2rem, 9vw, 8.8rem); line-height: .84; letter-spacing: -.055em; }
-    h1 em { color: var(--orange); }
+    h1 em { color: var(--ink); font-style: normal; }
     .hero-copy { margin: 38px 0 0; max-width: 720px; font-size: clamp(1.18rem, 2vw, 1.55rem); line-height: 1.5; }
     .hero-aside { border-left: 1px solid var(--line); padding-left: 28px; }
+    .id-photo { width: min(100%, 220px); aspect-ratio: 81 / 114; margin: 0 0 26px; overflow: hidden; border: 1px solid var(--line); background: rgba(16,47,43,.045); }
+    .id-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
     .meta-list { list-style: none; padding: 0; margin: 14px 0 0; }
     .meta-list li { padding: 13px 0; border-top: 1px solid var(--line); }
     .meta-list span { display: block; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
@@ -100,6 +102,7 @@
     .year { color: var(--orange); font-weight: 600; }
     .publication h3 { font-family: "Instrument Serif", serif; font-size: 1.55rem; line-height: 1.2; margin: 0 0 8px; font-weight: 400; }
     .publication p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .publication p strong { font-weight: 700; }
     .journal { text-align: right; font-size: .84rem; font-weight: 600; }
 
     .timeline-wrap { display: grid; grid-template-columns: .42fr 1fr; gap: 40px; }
@@ -108,6 +111,28 @@
     .timeline-item time { color: var(--muted); font-size: .88rem; }
     .timeline-item h3 { margin: 0 0 4px; font-size: 1.12rem; }
     .timeline-item p { margin: 0; color: var(--muted); }
+
+    .team { background: var(--ink); color: var(--white); overflow: hidden; position: relative; }
+    .team::after { content: ""; position: absolute; right: -120px; top: 120px; width: 360px; height: 360px; border: 1px solid rgba(217,255,93,.18); border-radius: 50%; box-shadow: 0 0 0 68px rgba(217,255,93,.025), 0 0 0 136px rgba(217,255,93,.018); pointer-events: none; }
+    .team .shell { position: relative; z-index: 1; }
+    .team .eyebrow, .team .lead { color: #bacdc8; }
+    .team-intro { display: grid; grid-template-columns: .42fr 1fr; gap: 40px; align-items: end; margin-bottom: 70px; }
+    .team-intro h2 { max-width: 850px; }
+    .team-group + .team-group { margin-top: 76px; }
+    .team-group-head { display: grid; grid-template-columns: .42fr 1fr; gap: 40px; align-items: baseline; margin-bottom: 24px; }
+    .team-group-head h3 { margin: 0; font-family: "Instrument Serif", serif; font-size: clamp(2.1rem,4vw,3.6rem); font-weight: 400; line-height: 1; }
+    .team-group-head p { margin: 0; color: #90a9a3; font-size: .9rem; }
+    .team-list { border-top: 1px solid rgba(255,255,255,.22); }
+    .team-member { display: grid; grid-template-columns: 72px minmax(220px,.72fr) minmax(240px,1fr); gap: 32px; padding: 34px 0; border-bottom: 1px solid rgba(255,255,255,.22); align-items: center; transition: background .2s ease, padding .2s ease; }
+    .team-member:hover { background: rgba(255,255,255,.035); padding-left: 18px; padding-right: 18px; }
+    .member-index { color: var(--accent); font-family: "Instrument Serif", serif; font-size: 1.5rem; align-self: start; }
+    .team-member h4 { margin: 0 0 8px; font-family: "Instrument Serif", serif; font-size: clamp(1.8rem,3vw,2.55rem); font-weight: 400; line-height: 1; }
+    .member-title { margin: 0; color: #bacdc8; font-size: .9rem; }
+    .member-state { display: grid; grid-template-columns: 110px 1fr; gap: 20px; align-items: start; }
+    .member-state-label { width: fit-content; padding: 5px 9px; color: var(--ink); background: var(--accent); border-radius: 999px; font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+    .alumni-group .member-state-label { background: var(--orange); }
+    .member-state p { margin: 0; color: var(--white); line-height: 1.45; }
+    .member-state p span { display: block; margin-top: 4px; color: #90a9a3; font-size: .86rem; }
 
     .contact { padding: 0; }
     .contact-card { background: var(--orange); padding: 72px; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 40px; }
@@ -127,14 +152,17 @@
       .nav-links.open { display: flex; }
       .menu-button { display: block; }
       .hero { padding-top: 64px; }
-      .hero-grid, .section-head, .timeline-wrap, .contact-card { grid-template-columns: 1fr; gap: 32px; }
+      .hero-grid, .section-head, .timeline-wrap, .team-intro, .contact-card { grid-template-columns: 1fr; gap: 32px; }
       .hero-aside { border-left: 0; border-top: 1px solid var(--line); padding: 24px 0 0; }
+      .id-photo { width: min(220px, 100%); }
       .research-grid { grid-template-columns: 1fr; }
       .research-card, .research-card + .research-card { padding: 30px 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.2); min-height: auto; }
       .research-card h3 { margin-top: 24px; }
       .publication { grid-template-columns: 64px 1fr; }
       .journal { grid-column: 2; text-align: left; }
       .contact-card { padding: 48px 28px; }
+      .team-member { grid-template-columns: 52px 1fr; gap: 22px; }
+      .member-state { grid-column: 2; }
     }
     @media (max-width: 520px) {
       .shell { width: min(100% - 28px, 1180px); }
@@ -143,6 +171,10 @@
       .publication { grid-template-columns: 1fr; gap: 8px; }
       .journal { grid-column: 1; }
       .timeline-item { grid-template-columns: 1fr; gap: 4px; }
+      .team-group-head { grid-template-columns: 1fr; gap: 8px; }
+      .team-member { grid-template-columns: 1fr; gap: 12px; }
+      .member-index { font-size: 1rem; }
+      .member-state { grid-column: 1; grid-template-columns: 1fr; gap: 10px; margin-top: 8px; }
       .footer-row { flex-direction: column; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -155,7 +187,7 @@
 <body>
   <header class="site-header">
     <nav class="nav shell" aria-label="Primary navigation">
-      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span> A.M. Research</a>
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span> M·H·C Lab</a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -163,6 +195,7 @@
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#experience">Experience</a>
+        <a href="#team">Team</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -172,21 +205,20 @@
     <section class="hero">
       <div class="shell hero-grid">
         <div>
-          <div class="status eyebrow">Principal Investigator · Systems Biology</div>
-          <h1 class="serif">Alex<br><em>Morgan</em></h1>
-          <p class="hero-copy">I study how cells make decisions under uncertainty—combining machine learning, single-cell genomics, and experiments to reveal the rules that shape living systems.</p>
+          <div class="status eyebrow">Assistant Professor</div>
+          <h1 class="serif">Maranus<br><em>Huajie</em><br>Chen</h1>
+          <p class="hero-copy">Trustworthy AI · Biosecurity · Cybersecurity & Privacy</p>
           <div class="hero-actions">
             <a class="button primary" href="#publications">Selected work</a>
-            <a class="button" href="mailto:alex.morgan@example.edu">Email me</a>
+            <a class="button" href="mailto:hjchen@cityu.edu.mo">Email me</a>
           </div>
         </div>
         <aside class="hero-aside" aria-label="Researcher details">
-          <div class="eyebrow">At a glance</div>
+          <div class="id-photo"><img src="white_background.jpg" alt="Maranus Huajie Chen"></div>
           <ul class="meta-list">
-            <li><span>Affiliation</span>Northbridge Institute of Science</li>
-            <li><span>Department</span>Computational Biology</li>
-            <li><span>Location</span>Cambridge, Massachusetts</li>
-            <li><span>Current focus</span>Cell-state prediction</li>
+            <li><span>Affiliation</span>City University of Macau</li>
+            <li><span>Department</span>Faculty of Data Science</li>
+            <li><span>Location</span>Taipa, Macau SAR, China</li>
           </ul>
         </aside>
       </div>
@@ -194,7 +226,9 @@
 
     <div class="ticker" aria-hidden="true">
       <div class="ticker-track">
-        <span>Machine learning</span><span>Single-cell genomics</span><span>Gene regulation</span><span>Open science</span><span>Machine learning</span><span>Single-cell genomics</span><span>Gene regulation</span><span>Open science</span>
+        <span>Our Work "CSC: Turning the Adversary’s Poison Against Itself" has been accepted by ACISP 2026!</span>
+        <span>Our Work "A Backdoor-Assisted Inversion Framework for Model Abuse Verification" has been accepted by IEEE TDSC!</span>
+        <span>Our Work "Bias-Corrected Momentum and Dynamic Step Bounding for Transferable Re-ID Attacks" has been accepted by CSS 2026!</span>
       </div>
     </div>
 
@@ -202,12 +236,12 @@
       <div class="shell">
         <div class="section-head reveal">
           <div class="eyebrow">Research program</div>
-          <div><h2 class="serif">From noisy measurements to biological insight.</h2><p class="lead" style="margin-top:24px">Our group builds interpretable models that connect molecular variation to cell behavior, with a focus on methods that remain useful beyond the dataset they were trained on.</p></div>
+          <div><h2 class="serif">Technology people can trust.</h2><p class="lead" style="margin-top:24px">My research focuses on Trustworthy AI, Biosecurity, Cybersecurity & Privacy to develop accountable systems that remain safe and useful in the real world.</p></div>
         </div>
         <div class="research-grid reveal">
-          <article class="research-card"><div class="number">01</div><h3>Predictive cell models</h3><p>Learning compact representations of cell state that anticipate response to perturbation and treatment.</p></article>
-          <article class="research-card"><div class="number">02</div><h3>Gene regulation</h3><p>Reconstructing dynamic regulatory programs from multimodal single-cell measurements.</p></article>
-          <article class="research-card"><div class="number">03</div><h3>Reliable computation</h3><p>Creating transparent, reproducible tools for biological discovery across laboratories and populations.</p></article>
+          <article class="research-card"><div class="number">01</div><h3>Trustworthy AI</h3><p>Building transparent, reliable AI systems that are worthy of trust in high-impact settings.</p></article>
+          <article class="research-card"><div class="number">02</div><h3>Biosecurity</h3><p>Examining how emerging technologies can be developed and deployed with biological risks in mind.</p></article>
+          <article class="research-card"><div class="number">03</div><h3>Cybersecurity &amp; privacy</h3><p>Advancing digital systems that safeguard security, privacy, and individual autonomy.</p></article>
         </div>
       </div>
     </section>
@@ -219,10 +253,15 @@
           <h2 class="serif">Recent work &amp; collaborations.</h2>
         </div>
         <div class="publication-list reveal">
-          <article class="publication"><div class="year">2025</div><div><h3>Generalizable representations of cellular response across perturbation screens</h3><p>A. Morgan, L. Chen, S. Okafor, et al.</p></div><div class="journal">Nature Methods</div></article>
-          <article class="publication"><div class="year">2024</div><div><h3>Resolving transient cell states with multimodal trajectory inference</h3><p>R. Singh, A. Morgan, J. Park, et al.</p></div><div class="journal">Cell Systems</div></article>
-          <article class="publication"><div class="year">2023</div><div><h3>A benchmark for interpretable perturbation-response models</h3><p>A. Morgan, M. Alvarez, T. Becker</p></div><div class="journal">Genome Biology</div></article>
-          <article class="publication"><div class="year">2022</div><div><h3>Context-aware inference of regulatory network dynamics</h3><p>D. Ito, A. Morgan, K. Williams, et al.</p></div><div class="journal">PLOS Computational Biology</div></article>
+          <article class="publication"><div class="year">2026</div><div><h3>CSC: Turning the Adversary’s Poison Against Itself</h3><p>Shi, Y., Guo, X., <strong>Chen, H.*</strong>, Zhu, T., Liu, B., &amp; Zhou, W.</p></div><div class="journal"><em>Australasian Conference on Information Security and Privacy</em>, pp. 303–323. Singapore: Springer Nature Singapore</div></article>
+          <article class="publication"><div class="year">2026</div><div><h3>A Backdoor-Assisted Inversion Framework for Model Abuse Verification</h3><p>Sun, H., Zhu, T., Ge, X., Wang, D., <strong>Chen, H.</strong>, Fang, B., &amp; Zhou, W.</p></div><div class="journal"><em>IEEE Transactions on Dependable and Secure Computing</em></div></article>
+          <article class="publication"><div class="year">2026</div><div><h3>Bias-Corrected Momentum and Dynamic Step Bounding for Transferable Re-ID Attacks</h3><p>Yang, H., <strong>Chen, H.*</strong></p></div><div class="journal">The 16th International Symposium on Cyberspace Safety and Security</div></article>
+          <article class="publication"><div class="year">2025</div><div><h3>Stand-in model protection: synthetic defense for membership inference and model inversion attacks</h3><p><strong>Chen, H.</strong>, Zhu, T., Ji, S., &amp; Zhou, W.</p></div><div class="journal">Knowledge-Based Systems, 316, 113339</div></article>
+          <article class="publication"><div class="year">2025</div><div><h3>Queen: Query unlearning against model extraction</h3><p><strong>Chen, H.</strong>, Zhu, T., Zhang, L., Liu, B., Wang, D., Zhou, W., &amp; Xue, M.</p></div><div class="journal">IEEE Transactions on Information Forensics and Security</div></article>
+          <article class="publication"><div class="year">2024</div><div><h3>When deep learning meets watermarking: A survey of application, attacks and defenses</h3><p><strong>Chen, H.</strong>, Liu, C., Zhu, T., &amp; Zhou, W.</p></div><div class="journal">Computer Standards &amp; Interfaces, 89, 103830</div></article>
+          <article class="publication"><div class="year">2024</div><div><h3>High-frequency matters: attack and defense for image-processing model watermarking</h3><p><strong>Chen, H.</strong>, Zhu, T., Liu, C., Yu, S., &amp; Zhou, W.</p></div><div class="journal">IEEE Transactions on Services Computing, 17(4), 1565–1579</div></article>
+          <article class="publication"><div class="year">2023</div><div><h3>Making DeepFakes more spurious: evading deep face forgery detection via trace removal attack</h3><p>Liu, C., <strong>Chen, H.</strong>, Zhu, T., Zhang, J., &amp; Zhou, W.</p></div><div class="journal">IEEE Transactions on Dependable and Secure Computing, 20(6), 5182–5196</div></article>
+          <article class="publication"><div class="year">2020</div><div><h3>Privacy-preserving SVM on outsourced genomic data via secure multi-party computation</h3><p><strong>Chen, H.</strong>, Ünal, A. B., Akgün, M., &amp; Pfeifer, N.</p></div><div class="journal">Proceedings of the Sixth International Workshop on Security and Privacy Analytics, pp. 61–69</div></article>
         </div>
       </div>
     </section>
@@ -231,24 +270,55 @@
       <div class="shell timeline-wrap reveal">
         <div><div class="eyebrow">Academic path</div><h2 class="serif" style="font-size:clamp(2.8rem,5vw,4.6rem);margin-top:18px">Built across disciplines.</h2></div>
         <div class="timeline">
-          <article class="timeline-item"><time>2021 — Present</time><div><h3>Principal Investigator</h3><p>Northbridge Institute of Science · Computational Biology</p></div></article>
-          <article class="timeline-item"><time>2018 — 2021</time><div><h3>Postdoctoral Fellow</h3><p>Broadview Genome Center · Quantitative Biology</p></div></article>
-          <article class="timeline-item"><time>2013 — 2018</time><div><h3>PhD, Bioengineering</h3><p>Westlake University · Systems &amp; Synthetic Biology</p></div></article>
-          <article class="timeline-item"><time>2009 — 2013</time><div><h3>BSc, Molecular Biology</h3><p>Redwood College · Honors Program</p></div></article>
+          <article class="timeline-item"><time>2024 — Present</time><div><h3>Assistant Professor</h3><p>City University of Macau, Taipa, Macau SAR, China</p></div></article>
+          <article class="timeline-item"><time>2021 — 2024</time><div><h3>Ph.D. Computer Science</h3><p>University of Technology Sydney, Sydney, New South Wales, Australia</p></div></article>
+          <article class="timeline-item"><time>2017 — 2020</time><div><h3>M.Sc., Bioinformatics</h3><p>Universität Tübingen, Tübingen, Baden-Württemberg, Germany</p></div></article>
+          <article class="timeline-item"><time>2012 — 2016</time><div><h3>B.Sc., Biotechnology</h3><p>Sun Yat-sen University, Guangzhou, Guangdong, China</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="team" id="team">
+      <div class="shell">
+        <div class="team-intro reveal">
+          <div class="eyebrow">Research group</div>
+          <div>
+            <h2 class="serif">People behind the research.</h2>
+            <p class="lead" style="margin-top:24px">A community of researchers and students working across trustworthy AI, biosecurity, cybersecurity, and privacy.</p>
+          </div>
+        </div>
+        <div class="team-group reveal">
+          <div class="team-group-head"><h3>Current Members</h3><p>Researchers currently working with the group.</p></div>
+          <div class="team-list">
+            <article class="team-member"><div class="member-index" aria-hidden="true">01</div><div><h4>Yuchen (Jason) Shi</h4><p class="member-title">B.Sc. in Computer Science, 2024--Present</p></div><div class="member-state"><div class="member-state-label">Current</div><p>Trustworthy AI, Biosecurity<span></span></p></div></article>
+            <article class="team-member"><div class="member-index" aria-hidden="true">02</div><div><h4>Hailin (Cynthia) Yang</h4><p class="member-title">B.Sc. in Computer Science, 2024--Present</p></div><div class="member-state"><div class="member-state-label">Current</div><p>Trustworthy AI<span></span></p></div></article>
+            <article class="team-member"><div class="member-index" aria-hidden="true">03</div><div><h4>Yilin (Coco) Yang</h4><p class="member-title">B.Sc. in Computer Science, 2024--Present</p></div><div class="member-state"><div class="member-state-label">Current</div><p>Trustworthy AI<span></span></p></div></article>
+            <article class="team-member"><div class="member-index" aria-hidden="true">04</div><div><h4>Guangkai (Kevin) Jiang</h4><p class="member-title">B.Sc. in Computer Science, 2025--Present</p></div><div class="member-state"><div class="member-state-label">Current</div><p>Trustworthy AI<span></span></p></div></article>
+            <article class="team-member"><div class="member-index" aria-hidden="true">05</div><div><h4>Xin (Samuel) Guo</h4><p class="member-title">B.Sc. in Computer Science, 2025--Present</p></div><div class="member-state"><div class="member-state-label">Current</div><p>Trustworthy AI, Biosecurity<span></span></p></div></article>
+            <article class="team-member"><div class="member-index" aria-hidden="true">06</div><div><h4>Yang Yu</h4><p class="member-title">M.Sc. in Computer Science, 2025--Present</p></div><div class="member-state"><div class="member-state-label">Current</div><p>Biosecurity, Cybersecurity & Privacy<span></span></p></div></article>
+            <article class="team-member"><div class="member-index" aria-hidden="true">07</div><div><h4>Saibo (Allen) Ye</h4><p class="member-title">B.Sc. in Computer Science, 2025--Present</p></div><div class="member-state"><div class="member-state-label">Current</div><p>Trustworthy AI, Cybersecurity & Privacy<span></span></p></div></article>
+            <article class="team-member"><div class="member-index" aria-hidden="true">08</div><div><h4>Qianyu (Queeny) Chen</h4><p class="member-title">B.Sc. in Computer Science, 2025--Present</p></div><div class="member-state"><div class="member-state-label">Current</div><p>Trustworthy AI<span></span></p></div></article>
+          </div>
+        </div>
+        <div class="team-group alumni-group reveal">
+          <div class="team-group-head"><h3>Alumni</h3><p>Former students and where their work has taken them.</p></div>
+          <div class="team-list">
+            <article class="team-member"><div class="member-index" aria-hidden="true">01</div><div><h4>Sihui Wu</h4><p class="member-title">M.Sc. in Computer Science, 2024--2026</p></div><div class="member-state"><div class="member-state-label">Now</div><p>National Civil Servant<span></span></p></div></article>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="contact" id="contact">
       <div class="shell contact-card reveal">
-        <div><div class="eyebrow">Collaborate</div><h2 class="serif">Interested in the same questions?</h2><p>I welcome conversations with researchers, students, and teams working at the intersection of computation and biology.</p></div>
-        <div class="contact-links"><a href="mailto:alex.morgan@example.edu">Email</a><a href="#">Google Scholar</a><a href="#">ORCID</a><a href="#">GitHub</a></div>
+        <div><div class="eyebrow">Collaborate</div><h2 class="serif">Interested in the same questions?</h2><p>I welcome conversations with researchers, students, and teams advancing trustworthy AI, biosecurity, cybersecurity, and privacy.</p></div>
+        <div class="contact-links"><a href="mailto:hjchen@cityu.edu.mo">Email</a><a href="https://scholar.google.com/citations?user=HQGopXIAAAAJ&h">Google Scholar</a></div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="shell footer-row"><span>© <span id="year"></span> Alex Morgan</span><span>Built for curiosity, clarity, and open science.</span></div>
+    <div class="shell footer-row"><span>© <span id="year"></span> Maranus Huajie Chen</span><span>Built for curiosity, clarity, and open science.</span></div>
   </footer>
 
   <script>
