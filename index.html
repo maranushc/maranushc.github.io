@@ -97,6 +97,16 @@
     .research-card h3 { margin: 58px 0 12px; font-size: 1.45rem; }
     .research-card p { color: #bacdc8; margin: 0; }
 
+    .services { background: var(--paper-2); }
+    .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); }
+    .service-card { padding: 34px 30px 36px 0; border-right: 1px solid var(--line); }
+    .service-card + .service-card { padding-left: 30px; border-right: 0; }
+    .service-card h3 { margin: 58px 0 12px; font-family: "Instrument Serif", serif; font-size: 2.2rem; font-weight: 400; line-height: 1; }
+    .service-card p { margin: 0; color: var(--muted); max-width: 480px; }
+    .service-list { list-style: none; padding: 0; margin: 24px 0 0; border-top: 1px solid var(--line); }
+    .service-list li { padding: 15px 0; border-bottom: 1px solid var(--line); line-height: 1.45; }
+    .service-list strong { display: block; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+
     .publication-list { border-top: 1px solid var(--line); }
     .publication { display: grid; grid-template-columns: 85px 1fr 170px; gap: 25px; padding: 29px 0; border-bottom: 1px solid var(--line); align-items: start; }
     .year { color: var(--orange); font-weight: 600; }
@@ -158,6 +168,10 @@
       .research-grid { grid-template-columns: 1fr; }
       .research-card, .research-card + .research-card { padding: 30px 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.2); min-height: auto; }
       .research-card h3 { margin-top: 24px; }
+      .service-grid { grid-template-columns: 1fr; }
+      .service-card, .service-card + .service-card { padding: 30px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .service-card:last-child { border-bottom: 0; }
+      .service-card h3 { margin-top: 24px; }
       .publication { grid-template-columns: 64px 1fr; }
       .journal { grid-column: 2; text-align: left; }
       .contact-card { padding: 48px 28px; }
@@ -193,6 +207,7 @@
       </button>
       <div class="nav-links" id="nav-links">
         <a href="#research">Research</a>
+        <a href="#services">Services</a>
         <a href="#publications">Publications</a>
         <a href="#experience">Experience</a>
         <a href="#team">Team</a>
@@ -242,6 +257,41 @@
           <article class="research-card"><div class="number">01</div><h3>Trustworthy AI</h3><p>Building transparent, reliable AI systems that are worthy of trust in high-impact settings.</p></article>
           <article class="research-card"><div class="number">02</div><h3>Biosecurity</h3><p>Examining how emerging technologies can be developed and deployed with biological risks in mind.</p></article>
           <article class="research-card"><div class="number">03</div><h3>Cybersecurity &amp; privacy</h3><p>Advancing digital systems that safeguard security, privacy, and individual autonomy.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div class="eyebrow">Academic service</div>
+          <div><h2 class="serif">Supporting the research community.</h2><p class="lead" style="margin-top:24px">I contribute to the wider research community through peer review and by helping academic venues run thoughtful, engaging events.</p></div>
+        </div>
+        <div class="service-grid reveal">
+          <article class="service-card"><div class="number">01</div><h3>Reviewer</h3><p>Providing careful, constructive reviews for research venues in trustworthy AI, cybersecurity, privacy, and related areas.</p><ul class="service-list">
+            <li><strong>ACM CCS</strong>ACM Conference on Computer and Communications Security</li>
+            <li><strong>USENIX Sec</strong>USENIX Security Symposium</li>
+            <li><strong>IEEE TIFS</strong>IEEE Transactions on Information Forensics and Security</li>
+            <li><strong>IEEE TDSC</strong>IEEE Transactions on Dependable and Secure Computing</li>
+            <li><strong>AAAI</strong>Association for the Advancement of Artificial Intelligence</li>
+            <li><strong>ACM MM</strong>ACM International Conference on Multimedia</li>
+            <li><strong>CSUR</strong>ACM Computing Survey</li>
+            <li><strong>ACM TOPS</strong>ACM Transactions on Privacy and Security</li>
+            <li><strong>NN</strong>Neural Networks</li>
+            <li><strong>PR</strong>Pattern Recognition</li>
+            <li><strong>KBS</strong>Knowledge-Based Systems</li>
+            <li><strong>KSEM</strong>International Conference on Knowledge Science, Engineering and Management</li>
+            <li><strong>ICA3PP</strong>International Conference on Algorithms and Architectures for Parallel Processing</li>
+            <li><strong>WAICA</strong>The World Artificial Intelligence Conference Academic</li>
+          </ul></article>
+          <article class="service-card"><div class="number">02</div><h3>Host</h3><p>Hosting academic sessions and events, helping speakers and participants exchange ideas clearly and productively.</p><ul class="service-list">
+            <li><strong>Program Committee</strong>The 4th International Conference on Data Security and Privacy Protection (DSPP 2026)</li>
+            <li><strong>Program Committee</strong>The First World Artificial Intelligence Conference Academic (WAICA 2026)</li>
+            <li><strong>Program Committee</strong>The 41st Annual AAAI Conference on Artificial Intelligence (AAAI 2027)</li>
+            <li><strong>Program Committee</strong>The 16th International Symposium on Cyberspace Safety and Security (CSS 2026)</li>
+            <li><strong>Local Chair</strong>The 18th International Conference on Knowledge Science, Engineering and Management (KSEM 2025)</li>
+            <li><strong>Program Committee</strong>The 24th International Conference on Algorithms and Architectures for Parallel Processing (ICA3PP 2024)</li>
+          </ul></article>
         </div>
       </div>
     </section>
